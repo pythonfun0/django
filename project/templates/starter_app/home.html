@@ -1,11 +1,22 @@
 {% extends 'base.html' %}
 
+
+{% comment %}
 {% block body_block %}
 
-    <h1>Hi Django!</h1>
+    <h4>Hi Django!</h4>
     <ul>
-        {% for message in messages %}
+        {% for message in string %}
             <li><p>{{ message }}</p></li>
         {% endfor %}
+    </ul>
+{% endblock %}
+{% endcomment %}
 
+
+{% block body_block %}
+    <!--h4>Hi Django!</h4-->
+    <p>{{ json_data }}</p>
+    <p>{{ loaded_num }}</p>
+    <p>{{ relode_counter }}</p>
 {% endblock %}
