@@ -22,7 +22,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles'
 )
 
-PROJECT_APPS = ('starter_app',)
+PROJECT_APPS = (
+    'starter_app',
+)
 
 INSTALLED_APPS += PROJECT_APPS
 

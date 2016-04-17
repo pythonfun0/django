@@ -1,0 +1,17 @@
+body {
+	background-color: lightblue;
+}
+
+.blog_content#title {
+	font-family: Arial;
+	font-size: 20px;
+	color: rgb(224,0,102)
+}
+
+.blog_content#content {
+	width: 400px;
+	text-align: justify;
+	font-family: Arial;
+	font-size: 14px;
+}
+

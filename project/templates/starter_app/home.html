@@ -1,22 +1,22 @@
 {% extends 'base.html' %}
 
-
-{% comment %}
-{% block body_block %}
-
-    <h4>Hi Django!</h4>
+{% block list_of_blogs %}
+    <h2>Blogs:</h2>
     <ul>
-        {% for message in string %}
-            <li><p>{{ message }}</p></li>
+        {% for key, value in blogs.items|dictsort:"0.lower" %}
+            <aside class="blogs" id="link"><strong><a href="{{ value.slug }}"> {{ value.title }}</a></strong></aside>
+            <aside class="blogs" id="published"><strong>{{ value.published|date:"o-m-d H:i:s" }}</strong></aside>
+            <aside class="blogs" id="content_part"><em><strong>Content: </strong></em>{{ value.body }}</aside>
         {% endfor %}
     </ul>
 {% endblock %}
-{% endcomment %}
 
 
+
+{% comment %}
 {% block body_block %}
-    <!--h4>Hi Django!</h4-->
     <p>{{ json_data }}</p>
     <p>{{ loaded_num }}</p>
     <p>{{ relode_counter }}</p>
 {% endblock %}
+{% endcomment %}

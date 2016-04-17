@@ -4,14 +4,17 @@
 <head>
     <meta charset="utf-8">
     <title>Starter</title>
-    <link rel="stylesheet" href="/static/css/stylesheet.css">
+    <link href="/static/css/blogs.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/blog_content.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
-    <div class="wrapper">
-        {% block body_block %}{% endblock %}
+    <div class="blogs">
+        {% block list_of_blogs %}{% endblock %}
     </div>
-    {% block scripts %}{% endblock %}
+    <div class="blog_content">
+        {% block blogs_content %}{% endblock %}
+    </div>
 </body>
 
 </html>
