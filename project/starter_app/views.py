@@ -1,7 +1,6 @@
 from django.template.defaultfilters import slugify
 from django.shortcuts import render
 from datetime import datetime
-import copy
 import json
 import os
 
@@ -14,13 +13,11 @@ json_file_path = os.path.join(DJANGO_ROOT, 'data', 'blogs.json')
 with open(json_file_path) as from_json:
         loaded_data = json.load(from_json)
 from_json.close()
-blog_details = copy.deepcopy(loaded_data)
+
 
 for item in loaded_data:
     loaded_data[item]['published'] = eval(loaded_data[item]['published'])
-    loaded_data[item]['body'] = loaded_data[item]['body'][0:50] + '...'
     loaded_data[item]['slug'] = slugify(loaded_data[item]['title'])
-    blog_details[item]['slug'] = slugify(blog_details[item]['title'])
 
 
 def blogs(request):
@@ -30,9 +27,9 @@ def blogs(request):
 
 def post_detail(request):
     slug = str(request)[20:-2]
-    for item in blog_details.keys():
-        if blog_details[item]['slug'] == slug:
-            details = {'details_of_blogs': blog_details[item]}
+    for item in loaded_data.keys():
+        if loaded_data[item]['slug'] == slug:
+            details = {'details_of_blogs': loaded_data[item]}
     return render(request, 'starter_app/post_detail.html', details)
 
 

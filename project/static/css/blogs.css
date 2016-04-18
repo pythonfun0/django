@@ -6,7 +6,19 @@ body {
 	margin-left: 15px;
 }
 
+nav a:link, a:visited{
+	text-decoration: none;
+	color: purple;
+}
+
+nav a:link, a:hover{
+	text-decoration: none;
+	color: brown;
+}
+
 .blogs#link {
+	font-weight: bold;
+	margin: 0;
 	margin-left: 40px;
 	padding-bottom: 5px;
 	list-style: none;
@@ -15,6 +27,8 @@ body {
 }
 
 .blogs#published {
+	margin: 0;
+	font-weight: bold;
 	margin-left: 40px;
 	padding-bottom: 10px;
 	font-family: Arial;
@@ -23,6 +37,11 @@ body {
 }
 
 .blogs#content_part {
+	margin: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 50ch;
 	margin-left: 40px;
 	padding-bottom: 30px;
 	font-family: Arial;
@@ -30,3 +49,16 @@ body {
 	padding-bottom: 50px;
 }
 
+.blog_content#title {
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 20px;
+	color: rgb(224,0,102)
+}
+
+.blog_content#content {
+	width: 400px;
+	text-align: justify;
+	font-family: Arial;
+	font-size: 14px;
+}
