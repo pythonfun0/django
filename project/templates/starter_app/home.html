@@ -3,12 +3,12 @@
 {% block list_of_blogs %}
     <h2>Blogs:</h2>
     <ul>
-        {% for key, value in blogs.items|dictsort:"0.lower" %}
+        {% for value in blogs %}
         <nav>
-            <p class="blogs" id="link"><a href="{{ value.slug }}"> {{ value.title }}</a></p>
+            <p class="link"><a href="blogs/{{ value.slug }}"> {{ value.title }}</a></p>
         </nav>
-            <p class="blogs" id="published">{{ value.published|date:"o-m-d H:i:s" }}</p>
-            <p class="blogs" id="content_part"><em><strong>Content: </strong></em>{{ value.body }}</p>
+            <p class="published">{{ value.published|date:"o-m-d H:i:s" }}</p>
+            <p class="content_part"><em><strong>Content: </strong></em>{{ value.body }}</p>
         {% endfor %}
     </ul>
 {% endblock %}
