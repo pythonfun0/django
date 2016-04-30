@@ -1,24 +1,17 @@
 {% extends 'base.html' %}
 
+
 {% block list_of_blogs %}
-    <h2>Blogs:</h2>
-    <ul>
-        {% for value in blogs %}
-        <nav>
-            <p class="link"><a href="blogs/{{ value.slug }}"> {{ value.title }}</a></p>
-        </nav>
-            <p class="published">{{ value.published|date:"o-m-d H:i:s" }}</p>
-            <p class="content_part"><em><strong>Content: </strong></em>{{ value.body }}</p>
-        {% endfor %}
+<div class="dropdown">
+    <ul class="dropbtn">Posts
+        <li class="dropdown-content">
+            {% for post in posts %}
+                <a href="{% url 'starter_app:post_detail' post.slug %}"> {{ post.title }}</a>
+            {% endfor %}
+        </li>
     </ul>
+</div>
+
+
+<p class="welcome">Welcome to my first Django blog site!</p>
 {% endblock %}
-
-
-
-{% comment %}
-{% block body_block %}
-    <p>{{ json_data }}</p>
-    <p>{{ loaded_num }}</p>
-    <p>{{ relode_counter }}</p>
-{% endblock %}
-{% endcomment %}

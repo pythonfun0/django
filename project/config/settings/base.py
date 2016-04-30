@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+'TOPdeskWifi'
 from os.path import abspath, dirname, join, normpath
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 
