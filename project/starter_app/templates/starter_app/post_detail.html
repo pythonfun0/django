@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 
-{% block blogs_content %}
+{% block post_content %}
+
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'starter_app/post_detail.css' %}"></link>
+
     <ul>
     	<p class="title">{{ details_of_post.title }}</p>
     	<p class="content">{{ details_of_post.body }}</p>

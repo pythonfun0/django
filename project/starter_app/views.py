@@ -8,7 +8,7 @@ from config.settings.base import DJANGO_ROOT
 
 
 def read_data():
-    json_file_path = os.path.join(DJANGO_ROOT, 'data', 'blogs.json')
+    json_file_path = os.path.join(DJANGO_ROOT, 'starter_app/static/data/blogs.json')
 
     with open(json_file_path) as blog_json:
         blog_data = json.load(blog_json)

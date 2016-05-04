@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 
+{% block list_of_posts %}
 
-{% block list_of_blogs %}
-<div class="dropdown">
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'starter_app/posts.css' %}"></link>
+
+<div class="menubar">
     <ul class="dropbtn">Posts
         <li class="dropdown-content">
             {% for post in posts %}
@@ -12,6 +15,5 @@
     </ul>
 </div>
 
-
-<p class="welcome">Welcome to my first Django blog site!</p>
+<p id="welcome">Welcome to my first Django blog site!</p>
 {% endblock %}
