@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
-
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'starter_app/posts.css' %}"></link>
 <head>
     <meta charset="utf-8">
     <title>Starter</title>
@@ -8,9 +9,8 @@
 
 <body>
     <div>
+        {% include "starter_app/navigation.html" %}
         {% block list_of_posts %}{% endblock %}
-    </div>
-    <div>
         {% block post_content %}{% endblock %}
     </div>
 </body>

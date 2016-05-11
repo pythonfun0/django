@@ -1,50 +1,113 @@
 body {
 	background-color: lightblue;
 	margin: auto;
-	width: 80%;
-	background: url("images/background4.jpg") repeat center;
+	background: url("images/background4.jpg") repeat top;
 }
-.menubar {
-	background-color: #111;
+/* home.html style*/
+.active {
+    font-weight: bold;
+    border: solid 1px white;
 }
+
+.list-of-posts {
+	padding: 40px;
+}
+
+.date-of-post {
+	padding: 5px 0 5px 0;
+	margin: 0 30%;
+	list-style-type: none;
+	font-size: 15px;
+	font-style: italic;
+}
+
+.post-content-part {
+	margin: 0 30%;
+	font-family: Arial;
+	list-style-type: none;
+}
+
+.read-more {
+	text-decoration: none;
+	font-style: italic;
+	font-size: 14px;
+	color: darkorange;
+	margin: 0 60%;
+}
+.list-of-posts li a{
+	margin-left: 30%;
+	text-decoration: none;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 20px;
+	color: rgb(224,0,102)
+
+}
+
 .dropbtn {
-	width: 80px;
+	width: 90.5%;
+	height: 35px;
 	text-align: center;
 	background-color: darkorange;
 	color: white;
 	padding: 12px;
 	font-size: 22px;
-	border: none;
-	margin: 0 0 0 6%;
+	border: solid 1px;
+	margin: 0 0 0 0;
 }
+.menubar {
+	position: fixed;
+	width: 20%;
+	height: 100%;
+	background-color: #111;
+}
+
 .dropbtn:hover {
 	background-color: rgb(255, 102, 0);
 }
 .dropdown-content {
-	left: 14.8%;
-	margin: 12px 0;
-	position: absolute;
-	display: none;
-	background-color: white;
+	list-style-type: none;
+	margin: 22px 0;
+	position: relative;
 }
 .dropdown-content a {
 	color: black;
 	background-color: rgba(255, 212, 0, 1);
 	font-size: 16px;
-	padding: 12px 16px;
+	padding: 16px 16px;
 	text-decoration: none;
 	display: block;
+	margin: 0 15px;
 }
-.dropbtn:hover .dropdown-content {
-	display: block;
-}
+
 .dropdown-content a:hover {
 	background-color: rgba(255, 152, 0, 1);
 }
 
-#welcome {
-	text-align: center;
+/* post_detail.html style*/
+ul {
+	margin-top: 0;
+}
+
+.title {
+	padding-top: 40px;
+	margin: 0 30%;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 20px;
+	color: rgb(224,0,102)
+}
+.published {
+	margin: 0 30% ;
+	text-align: left;
 	color: rgb(0,0,255);
-	padding-top: 12%;
-	font: italic bold 36px Georgia serif;
+	padding: 5px 0 5px 0;
+	font: italic bold 16px Georgia serif;
+}
+.content {
+	margin: 0 30%;
+	width: 400px;
+	text-align: justify;
+	font-family: Arial;
+	font-size: 14px;
 }

@@ -1,19 +1,12 @@
 {% extends 'base.html' %}
 
 {% block list_of_posts %}
-
-{% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'starter_app/posts.css' %}"></link>
-
-<div class="menubar">
-    <ul class="dropbtn">Posts
-        <li class="dropdown-content">
-            {% for post in posts %}
-                <a href="{% url 'starter_app:post_detail' post.slug %}"> {{ post.title }}</a>
-            {% endfor %}
-        </li>
-    </ul>
+<div class="list-of-posts">
+	{% for post in posts %}
+		<li><a href="{% url 'starter_app:post_detail' post.slug %}"> {{ post.title }}</a></li>
+		<li class="date-of-post">Created: {{ post.published_datetime|date:"Y-m-d" }}</li>
+		<li class="post-content-part">{{ post.body|truncatewords:15 }}</li>
+		<a class="read-more" href="{% url 'starter_app:post_detail' post.slug %}">Read more</a>
+	{% endfor %}
 </div>
-
-<p id="welcome">Welcome to my first Django blog site!</p>
 {% endblock %}

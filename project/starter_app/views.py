@@ -1,6 +1,6 @@
-from django.template.defaultfilters import slugify
+from django.template import RequestContext
 from django.shortcuts import render
-from dateutil.parser import parse
+import dateutil.parser
 import json
 import os
 
@@ -14,15 +14,14 @@ def read_data():
         blog_data = json.load(blog_json)
 
     for item in blog_data:
-        item['published_datetime'] = parse(item['published'])
-        item['slug'] = slugify(item['title'])
-
+        item['published_datetime'] = dateutil.parser.parse(item['published'])
     return blog_data
 
-def unique_post(slug):
+
+def post_get_by_slug(slug):
     for item in blog_data:
         if item['slug'] == slug:
-            details = {'details_of_post': item}
+            details = item
     return details
 
 
@@ -32,7 +31,8 @@ def blogs(request):
 
 
 def post_detail(request, slug):
-    details = unique_post(slug)
+    details = {'details_of_post': post_get_by_slug(slug), 'posts': blog_data}
     return render(request, 'starter_app/post_detail.html', details)
+
 
 blog_data = read_data()

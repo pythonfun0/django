@@ -1,12 +1,9 @@
 {% extends 'base.html' %}
 
 {% block post_content %}
-
-{% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'starter_app/post_detail.css' %}"></link>
-
     <ul>
     	<p class="title">{{ details_of_post.title }}</p>
+    	<p class="published">Created: {{ details_of_post.published_datetime|date:"Y-m-d" }}</p>
     	<p class="content">{{ details_of_post.body }}</p>
     </ul>
 {% endblock %}
