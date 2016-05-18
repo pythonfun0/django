@@ -1,16 +1,17 @@
 {% block menubar %}
 
 <div class="menubar">
-    <ul class="dropbtn">Posts
-        <li class="dropdown-content">
-            {% for post in posts %}
-                {% if post.title == details_of_post.title %}
-                    <a class="active" href="{% url 'starter_app:post_detail' post.slug %}"> {{ post.title }}</a>
-                {% else %}
-                    <a href="{% url 'starter_app:post_detail' post.slug %}"> {{ post.title }}</a>
-                {% endif %}
-            {% endfor %}
-        </li>
-    </ul>
+	<ul class="dropbtn"><a href="{% url 'starter_app:posts' %}">Posts</a>
+		{% for post in posts %}
+			<li class="dropdown-content">
+				<a {% if post.title == details_of_post.title %}class="active"{% endif %}
+					href="{% url 'starter_app:post_detail' post.slug %}"> {{ post.title }}
+				</a>
+			</li>
+		{% endfor %} 
+	</ul>
+	<p class="create-new-post">
+		<a href="{% url 'starter_app:create_new_post' %}">Create new post</a>
+	</p>
 </div>
 {% endblock %}

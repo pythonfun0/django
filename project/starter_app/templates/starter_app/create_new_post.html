@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h3>Create a new post</h3>
+	{% if created %}
+		<h1 class="failure-in-upload">{{ message }}</h1>
+
+	{% else %}
+		<form class="create-form-template" action="." method="post">
+			<p>Title: {{ form.title }}</p>
+			<p>Content: {{ form.content }}</p>
+			{% csrf_token %}
+			<input type="submit" value="Upload">
+		</form>
+	{% endif %}
+{% endblock %}

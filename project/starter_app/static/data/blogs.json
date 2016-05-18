@@ -1,20 +1,20 @@
 [
     {
-        "title": "Python Basic Syntax",
-        "slug": "python-basic-syntax",
-        "published": "2015-09-12T13:45:11",
-        "body": "The Python language has many similarities to Perl, C, and Java. However, there are some definite differences between the languages. First Python Program Let us execute programs in different modes of programming. Interactive Mode Programming Invoking the interpreter without passing a script file as a parameter brings up the following prompt"
-    },
-    {
-        "title": "Python Variable Types",
-        "slug": "python-variable-types",
-        "published": "2015-08-14T16:22:33",
-        "body": "Variables are nothing but reserved memory locations to store values. This means that when you create a variable you reserve some space in memory. Based on the data type of a variable, the interpreter allocates memory and decides what can be stored in the reserved memory. Therefore, by assigning different data types to variables, you can store integers, decimals or characters in these variables."
-    },
-    {
-        "title": "Python Basic Operators",
-        "slug": "python-basic-operators",
+        "body": "The Python language has many similarities to Perl, C, and Java. However, there are some definite differences between the languages. First Python Program Let us execute programs in different modes of programming. Interactive Mode Programming Invoking the interpreter without passing a script file as a parameter brings up the following prompt",
         "published": "2015-07-15T10:15:13",
-        "body": "Operators are the constructs which can manipulate the value of operands. Consider the expression 4 + 5 = 9. Here, 4 and 5 are called operands and + is called operator. Types of Operator Python language supports the following types of operators."
+        "slug": "python-basic-syntax",
+        "title": "Python Basic Syntax"
+    },
+    {
+        "body": "Variables are nothing but reserved memory locations to store values. This means that when you create a variable you reserve some space in memory. Based on the data type of a variable, the interpreter allocates memory and decides what can be stored in the reserved memory. Therefore, by assigning different data types to variables, you can store integers, decimals or characters in these variables.",
+        "published": "2016-02-12T13:45:11",
+        "slug": "python-variable-types",
+        "title": "Python Variable Types"
+    },
+    {
+        "body": "Operators are the constructs which can manipulate the value of operands. Consider the expression 4 + 5 = 9. Here, 4 and 5 are called operands and + is called operator. Types of Operator Python language supports the following types of operators.",
+        "published": "2015-08-14T16:22:33",
+        "slug": "python-basic-operators",
+        "title": "Python Basic Operators"
     }
 ]

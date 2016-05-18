@@ -1,9 +1,7 @@
 {% extends 'base.html' %}
 
-{% block post_content %}
-    <ul>
-    	<p class="title">{{ details_of_post.title }}</p>
-    	<p class="published">Created: {{ details_of_post.published_datetime|date:"Y-m-d" }}</p>
-    	<p class="content">{{ details_of_post.body }}</p>
-    </ul>
+{% block content %}
+	<p class="title">{{ details_of_post.title }}</p>
+	<p class="published">Created: {{ details_of_post.published_datetime|date:"Y-m-d" }}</p>
+	<p class="content">{{ details_of_post.body }}</p>
 {% endblock %}

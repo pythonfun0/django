@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 {% load staticfiles %}
+{% load menubar %}
 <link rel="stylesheet" type="text/css" href="{% static 'starter_app/posts.css' %}"></link>
 <head>
     <meta charset="utf-8">
@@ -8,10 +9,10 @@
 </head>
 
 <body>
+	{% menubar %}
+    {% comment %}{% include "starter_app/navigation.html" %}{% endcomment %}
     <div>
-        {% include "starter_app/navigation.html" %}
-        {% block list_of_posts %}{% endblock %}
-        {% block post_content %}{% endblock %}
+        {% block content %}{% endblock %}
     </div>
 </body>
 

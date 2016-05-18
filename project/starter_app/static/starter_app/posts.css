@@ -11,39 +11,37 @@ body {
 
 .list-of-posts {
 	padding: 40px;
+	width: 400px;
+	margin: 0 30%;
 }
 
 .date-of-post {
 	padding: 5px 0 5px 0;
-	margin: 0 30%;
 	list-style-type: none;
 	font-size: 15px;
 	font-style: italic;
 }
 
 .post-content-part {
-	margin: 0 30%;
 	font-family: Arial;
 	list-style-type: none;
 }
 
-.read-more {
+.list-of-posts li a {
+	text-decoration: none;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 20px;
+	color: rgb(224,0,102)
+}
+
+.list-of-posts .read-more {
 	text-decoration: none;
 	font-style: italic;
 	font-size: 14px;
 	color: darkorange;
 	margin: 0 60%;
 }
-.list-of-posts li a{
-	margin-left: 30%;
-	text-decoration: none;
-	font-weight: bold;
-	font-family: Arial;
-	font-size: 20px;
-	color: rgb(224,0,102)
-
-}
-
 .dropbtn {
 	width: 90.5%;
 	height: 35px;
@@ -54,6 +52,33 @@ body {
 	font-size: 22px;
 	border: solid 1px;
 	margin: 0 0 0 0;
+}
+a {
+	color: blue;
+	padding-bottom: 
+}
+a:link {
+	text-decoration: none;
+}
+.create-new-post {
+	position: fixed;
+	bottom: 20px;
+	width: 18%;
+	text-align: center;
+	background-color: darkorange;
+	color: white;
+	padding: 12px;
+	font-size: 22px;
+	border: solid 1px;
+	margin: 80% 0 0 0;
+}
+
+.create-form-template {
+	margin: 0% 0 0 40%;
+}
+
+.failure-in-upload {
+	margin: 0% 0 0 40%;
 }
 .menubar {
 	position: fixed;
